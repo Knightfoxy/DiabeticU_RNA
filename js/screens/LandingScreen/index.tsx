@@ -28,7 +28,7 @@ function LandingScreen({ navigation }) {
                 style={{ marginLeft: 0, width: metrics.screenWidth, marginBottom: 0 }}
                 isVisible={modalVisible}
                 onTouchCancel={toggleModal}
-                animationInTiming={700}
+                animationInTiming={1000}
                 onBackButtonPress={toggleModal}
                 onBackdropPress={toggleModal}
                 animationIn={'bounceInUp'}

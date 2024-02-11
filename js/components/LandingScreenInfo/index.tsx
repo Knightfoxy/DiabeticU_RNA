@@ -1,8 +1,6 @@
 import React from "react";
 import { Image, Text, View } from "react-native";
 import styles from "./styles";
-import { ImageName } from "../../assets";
-
 
 function LandingPgInfoScroll({ item }) {
     return (

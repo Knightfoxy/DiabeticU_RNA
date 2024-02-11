@@ -1,19 +1,69 @@
 import { StyleSheet } from 'react-native';
-import metrics from '../../themes/metrics';
+import metrics from '../../../../themes/metrics';
 
 export default StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'column',
+    textInputStyle: {
+        marginTop: 10,
+        marginHorizontal: 30,
         backgroundColor: 'white',
-    },
-    loginAppIcon: {
-        width: 52,
+        marginBottom: (metrics.screenWidth / 100),
         height: 60,
-        resizeMode: 'contain',
-        marginTop: 25,
-        marginLeft: 30,
     },
+    forgotTapStyle: {
+        fontSize: 14,
+        fontWeight: '400',
+        color: '#0B152D',
+        textAlign: 'left',
+    },
+    forgotTouchable: {
+        alignSelf: 'flex-end',
+        width: 150,
+        height: 30,
+        marginTop: 10,
+    },
+    countryCodeView: {
+        flex: 1,
+        marginLeft: 30,
+        height: 60,
+        justifyContent: 'center',
+        alignSelf: 'center',
+        marginTop: 10,
+        borderRadius: 16,
+        borderWidth: 1,
+        borderColor: '#E7EBF3',
+        flexDirection: 'row',
+        overflow: 'hidden',
+    },
+    countryCodeImg: {
+        marginLeft: 5,
+        height: 22,
+        width: 22,
+        justifyContent: 'center',
+        alignSelf: 'center',
+        borderRadius: 11,
+        borderWidth: 1,
+        borderColor: '#E7EBF3',
+        flexDirection: 'row'
+    },
+    countryCodeText: {
+        fontWeight: '500',
+        color: '#0B152D',
+        marginHorizontal: 4,
+        alignSelf: 'center',
+        borderColor: '#E7EBF3',
+        flexDirection: 'row',
+        textAlign: 'center',
+    },
+    countryCodeChevronImg: {
+        alignSelf: 'center',
+        borderColor: '#E7EBF3',
+        flexDirection: 'row',
+        resizeMode: 'center',
+    },
+
+
+
+
     h1: {
         fontWeight: '700',
         fontSize: 28,
@@ -100,7 +150,7 @@ export default StyleSheet.create({
     },
     biometricimg: {
         flex: 1,
-        alignItems : 'flex-end',
+        alignItems: 'flex-end',
         resizeMode: 'contain',
         alignSelf: 'center',
     },

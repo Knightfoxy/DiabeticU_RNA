@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import metrics from '../../themes/metrics';
+import metrics from '../../../themes/metrics';
 
 export default StyleSheet.create({
     container: {
@@ -14,7 +14,7 @@ export default StyleSheet.create({
         borderRadius: 16,
         marginLeft: 30,
         marginTop: 10,
-       
+
     },
     rowContainer: {
         width: metrics.screenWidth - 60,
@@ -37,8 +37,8 @@ export default StyleSheet.create({
     credTypeTouchableBg: {
         backgroundColor: '#F6F9FA',
         flex: 1,
-        borderRadius: 16, 
-           
+        borderRadius: 16,
+
     },
     credTypeImg: {
         marginLeft: 16,

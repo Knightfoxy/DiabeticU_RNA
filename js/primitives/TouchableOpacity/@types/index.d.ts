@@ -15,7 +15,7 @@ export interface TouchableProps extends TouchableOpacityProps, ViewStyle {
   borderWidth?: number;
   width?: DimensionValue;
   height?: DimensionValue;
-  borderColor: ColorValue;
+  borderColor?: ColorValue;
   backgroundColor?: ColorValue;
   flexDirection?:
   | 'row'

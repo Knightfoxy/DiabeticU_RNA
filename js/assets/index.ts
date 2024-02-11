@@ -12,7 +12,9 @@ const ImageName = {
     backChevron: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/backChevron.png'),
     emailPostImg: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/emailPostImg.png'),
     phoneNumPostimg: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/phoneNumCred.png'),
-    biometicImg: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/Vector.png')
+    biometicImg: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/Vector.png'),
+    flagImg: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/flagImg.png'),
+    chevronBottom: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/chevronBottom.png'),
 }
 
 export { ImageName };
