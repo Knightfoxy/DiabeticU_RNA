@@ -7,7 +7,7 @@ import { ScreenNames } from "../../../navigators/screenNames";
 import TopBackButton from "../../../components/BackButton";
 import TopHeadingWithDesc from "../../../components/TopHeadingWithDesc";
 
-function InitiateForgotPassword({ navigation }) {
+function SetPasswordForgotFlow({ navigation }) {
 
     function didTapBack() {
         navigation.goBack()
@@ -49,4 +49,4 @@ function InitiateForgotPassword({ navigation }) {
     );
 };
 
-export default InitiateForgotPassword;
+export default SetPasswordForgotFlow;
