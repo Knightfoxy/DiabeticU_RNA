@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles";
 import { Image, TouchableOpacity, View, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -13,13 +13,21 @@ import BiometricFlow from "./Components/Biometric";
 
 function LoginScreen({ navigation }) {
     console.log('Rendering Login Screen.')
-
+    const [loginData, setLoginData] = useState({})
+    const [isContactDetailValid, setContactDetailValid] = useState(true)
+    const [isPasswordValid, setPasswordValid] = useState(true)
     function navigateToForgotPasswordScreen() {
         navigation.navigate(ScreenNames.InitiateForgotPassword)
     }
 
     const loginTappedHandler = () => {
         console.log('Login pressed')
+        console.log(loginData)
+
+    }
+
+    const handleFetchDataFromLoginForm = (data: any) => {
+        setLoginData(data)
     }
 
     return (
@@ -32,7 +40,7 @@ function LoginScreen({ navigation }) {
             <HeadingAndDescVertical
                 heading={'Login'} description={'We missed you! Please login to continue using this app.'}>
             </HeadingAndDescVertical>
-            <ManualSignInFlow navigateToForgetPassword={navigateToForgotPasswordScreen} ></ManualSignInFlow>
+            <ManualSignInFlow navigateToForgetPassword={navigateToForgotPasswordScreen} onFetchDataCallback={handleFetchDataFromLoginForm} ></ManualSignInFlow>
             <View
                 style={{ flex: 3, justifyContent: 'space-around' }}>
 

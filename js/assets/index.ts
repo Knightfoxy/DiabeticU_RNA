@@ -15,6 +15,7 @@ const ImageName = {
     biometicImg: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/Vector.png'),
     flagImg: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/flagImg.png'),
     chevronBottom: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/chevronBottom.png'),
+    errorPopupImg: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/errorImg.png')
 }
 
 export { ImageName };

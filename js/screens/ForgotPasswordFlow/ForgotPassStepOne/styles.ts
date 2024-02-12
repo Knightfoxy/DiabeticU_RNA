@@ -28,6 +28,15 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginHorizontal: 30,
+        shadowColor: '#7575BA',
+        shadowOffset: { width: 1, height: 3 },
+        shadowOpacity: 0.5,
+        shadowRadius: 3,
+        elevation: 5,
+    },
+    inputError: {
+        borderColor: 'red',
+        borderWidth: 1,
     },
 
 });

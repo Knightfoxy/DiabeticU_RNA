@@ -11,21 +11,30 @@ const BasicTextInput = (props: InputTextProp) => {
         textStyle,
         textViewStyle,
         onChangeText,
+        editable,
+        onFocus,
         onPress,
+        errorText = '',
         ...rest
     } = props;
 
+    let borderColor = (errorText !== '') ? 'red' : '#E7EBF3';
+    let activeBorderColor = (errorText !== '') ? 'red' : '#7F879A';
+    console.log(borderColor)
+
     return (
         <TextInput
+            editable={editable}
+            selectTextOnFocus={false}
             autoCorrect={false}
             autoFocus={autoFocus}
-            // onBlur={() => { userPassword }}
             blurOnSubmit={false}
             keyboardType='ascii-capable'
             enterKeyHint='next'
+            onFocus={onFocus}
             style={[props]}
-            outlineColor="#E7EBF3" outlineStyle={{ borderWidth: 1 }}
-            theme={{ roundness: 16 }} activeOutlineColor="#7F879A" mode="outlined"
+            outlineColor={borderColor} outlineStyle={{ borderWidth: 1 }}
+            theme={{ roundness: 16 }} activeOutlineColor={activeBorderColor} mode="outlined"
             label={placeHolder}
             value={children}
             onChangeText={onChangeText}

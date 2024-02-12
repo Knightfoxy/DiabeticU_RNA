@@ -7,7 +7,7 @@ import { memo } from "react";
 
 function HeadingAndDescVertical({ heading, description }) {
     return (
-        <View style={{ flex: 3, justifyContent: 'space-around' }}>
+        <View style={{ flex: 3, justifyContent: 'space-around'}}>
             <H1 style={{ marginLeft: 30 }}>{heading}</H1>
             <H6 style={{ marginHorizontal: 30, color: '#9CA0AB' }}>{description}</H6>
         </View>

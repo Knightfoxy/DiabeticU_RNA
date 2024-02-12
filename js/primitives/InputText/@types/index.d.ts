@@ -6,9 +6,12 @@ export interface InputTextProp extends TouchableOpacityProps, ViewStyle {
     placeHolder?: TextInputLabelProp;
     autoFocus?: boolean;
     children?: string;
+    editable?: boolean;
     textStyle?: TextStyle;
     disabled?: boolean;
+    onFocus?: (args: any) => void;
     textViewStyle?: ViewStyle;
+    errorText?: string | null;
     onChangeText?: (text: string) => void;
     onPress?: () => void;
 }
