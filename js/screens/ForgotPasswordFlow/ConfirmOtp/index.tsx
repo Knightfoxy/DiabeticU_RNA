@@ -11,13 +11,13 @@ function ResetPasswordOtpStep({ route, navigation }) {
 
     const contactDetails = route.params.contactDetails
     const contactType = route.params.contactType
-    const [value, setValue] = useState('');
-    const ref = useBlurOnFulfill({ value, cellCount: CELL_COUNT });
-    const [props, getCellOnLayoutHandler] = useClearByFocusCell({
-        value,
-        setValue,
-    });
-    
+    const [otp, setOtp] = useState(['', '', '', '']);
+    const inputRefs = useRef([
+        React.createRef(),
+        React.createRef(),
+        React.createRef(),
+        React.createRef(),1
+    ]);
     function didTapBack() {
         navigation.goBack()
     }

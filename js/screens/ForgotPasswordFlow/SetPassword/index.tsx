@@ -6,7 +6,6 @@ import { H1, H6 } from "../../../primitives/Text";
 import { ScreenNames } from "../../../navigators/screenNames";
 import TopBackButton from "../../../components/BackButton";
 import TopHeadingWithDesc from "../../../components/TopHeadingWithDesc";
-import CredentialTypes from "./credentialTypes";
 
 function InitiateForgotPassword({ navigation }) {
 
