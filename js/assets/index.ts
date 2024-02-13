@@ -15,7 +15,9 @@ const ImageName = {
     biometicImg: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/Vector.png'),
     flagImg: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/flagImg.png'),
     chevronBottom: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/chevronBottom.png'),
-    errorPopupImg: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/errorImg.png')
+    errorPopupImg: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/errorImg.png'),
+    checkmarkGreen: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/greenCheckmark.png'),
+    redCircle: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/redCircle.png'),
 }
 
 export { ImageName };

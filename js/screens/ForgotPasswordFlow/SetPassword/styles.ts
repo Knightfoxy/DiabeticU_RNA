@@ -51,5 +51,37 @@ export default StyleSheet.create({
         marginTop: 20,
         fontSize: 14,
     },
+    textInputStyle: {
+        marginTop: 10,
+        marginHorizontal: 30,
+        backgroundColor: 'white',
+        height: 60,
+    },
+    loginTouchableTitle: {
+        color: 'white',
+        fontSize: 16,
+        fontWeight: '700',
+    },
+    loginTouchable: {
+        marginTop: 40,
+        color: 'white',
+        borderColor: '#DCDCDC',
+        borderRadius: 16,
+        height: 60,
+        backgroundColor: '#000080',
+        borderWidth: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginHorizontal: 30,
+        shadowColor: '#7575BA',
+        shadowOffset: { width: 1, height: 3 },
+        shadowOpacity: 0.5,
+        shadowRadius: 3,
+        elevation: 5,
+    },
+    inputError: {
+        borderColor: 'red',
+        borderWidth: 1,
+    },
 
 });

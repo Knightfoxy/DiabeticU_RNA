@@ -1,49 +1,51 @@
 import React, { useState } from "react";
-import { Image, TouchableOpacity, View } from "react-native";
+import { View } from "react-native";
 import { ImageName } from "../../../assets";
 import styles from "./styles";
-import { H1, H6 } from "../../../primitives/Text";
-import { ScreenNames } from "../../../navigators/screenNames";
 import TopBackButton from "../../../components/BackButton";
 import TopHeadingWithDesc from "../../../components/TopHeadingWithDesc";
+import Touchables from "../../../primitives/TouchableOpacity";
+import { TextInput } from "react-native-paper";
+import PasswordValidatorView from "../../../components/PasswordValidationView";
 
 function SetPasswordForgotFlow({ navigation }) {
 
+    const [userPassword, setUserPassword] = useState('')
+    const [isSecurePasswordEntry, setIsSecurePasswordEntry] = useState(true)
+
     function didTapBack() {
         navigation.goBack()
+    }
+
+    function toggleSecurePassword() {
+        setIsSecurePasswordEntry(!isSecurePasswordEntry)
     }
 
     return (
 
         <View style={styles.container}>
             <TopBackButton tapBack={didTapBack}></TopBackButton>
-            <TopHeadingWithDesc heading={'Forgot Password'} description={'Please select your reset mechanism to recover your password'}></TopHeadingWithDesc>
+            <TopHeadingWithDesc heading={'Reset Password'} description={'Please enter your new password that you want to continue with'}></TopHeadingWithDesc>
 
             <View style={{ flex: 13 }}>
-                <View style={{ flex: 0.45, flexDirection: 'row', marginTop: 20, }}>
-                    <TouchableOpacity
-                        style={[styles.credTypeTouchableBg, { marginLeft: 30, marginRight: 16 }]}
-                        onPress={() => {
-                            navigation.navigate(ScreenNames.ForgotPasswordAddCredentials, {
-                                credentailType: CredentialTypes.email
-                            })
-                        }}>
-                        <Image style={styles.credTypeImg} source={ImageName.emailPostImg}></Image>
-                        <H6 style={styles.credsHeading}> Use Email ID</H6>
-                        <H6 style={[styles.descriptionText, { marginLeft: 16 }]}>Send OTP to your email to reset your password</H6>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={[styles.credTypeTouchableBg, { marginRight: 30 }]}
-                        onPress={() => {
-                            navigation.navigate(ScreenNames.ForgotPasswordAddCredentials, {
-                                credentailType: CredentialTypes.phone
-                            })
-                        }}>
-                        <Image style={styles.credTypeImg} source={ImageName.phoneNumPostimg}></Image>
-                        <H6 style={styles.credsHeading}> Use Phone Number</H6>
-                        <H6 style={[styles.descriptionText, { marginLeft: 16 }]}>Send OTP code to registered number to reset your password</H6>
-                    </TouchableOpacity>
-                </View>
+                <TextInput
+                    autoCorrect={false}
+                    keyboardType='ascii-capable'
+                    enterKeyHint='done'
+                    style={styles.textInputStyle} outlineColor="#E7EBF3" outlineStyle={{ borderWidth: 1 }}
+                    theme={{ roundness: 16 }} activeOutlineColor="#7F879A" mode="outlined"
+                    secureTextEntry={isSecurePasswordEntry}
+                    right={<TextInput.Icon color="#000080" style={{ top: 5 }} icon={ImageName.togglePassword} onPress={toggleSecurePassword} />}
+                    label="New Password" value={userPassword}
+                    onChangeText={text => {
+                        setUserPassword(text)
+                    }}
+                />
+                <PasswordValidatorView/>
+                <Touchables
+                    {...styles.loginTouchable}
+                    titleStyle={styles.loginTouchableTitle}
+                    title='Reset Password'></Touchables>
             </View>
         </View>
     );

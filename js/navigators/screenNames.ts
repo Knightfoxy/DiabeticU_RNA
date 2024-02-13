@@ -5,6 +5,7 @@ const ScreenNames = {
     InitiateForgotPassword: 'InitiateForgotPassword',
     ForgotPasswordAddCredentials: 'ForgotPasswordStepOne',
     ResetPasswordOtpStep: 'ResetPasswordOtpStep',
+    SetPasswordForgotFlow: 'SetPasswordForgotFlow',
 }
 
 export { ScreenNames };

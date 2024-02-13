@@ -6,6 +6,7 @@ import { TextInput } from "react-native-paper";
 import Touchables from "../../../primitives/TouchableOpacity";
 import TopBackButton from "../../../components/BackButton";
 import TopHeadingWithDesc from "../../../components/TopHeadingWithDesc";
+import { ScreenNames } from "../../../navigators/screenNames";
 
 function ResetPasswordOtpStep({ route, navigation }) {
 
@@ -91,6 +92,9 @@ function ResetPasswordOtpStep({ route, navigation }) {
                 <Touchables
                     {...styles.loginTouchable}
                     titleStyle={styles.loginTouchableTitle}
+                    onPress={() => {
+                        navigation.navigate(ScreenNames.SetPasswordForgotFlow)
+                    }}
                     title='Verify'></Touchables>
                 <View style={{ flex: 4, flexDirection: 'column' }}></View>
             </View>
