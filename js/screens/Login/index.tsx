@@ -56,6 +56,9 @@ function LoginScreen({ navigation }) {
                 <View style={styles.touchableSignupBg}>
                     <H6 style={{ color: '#7F879A' }}>Create an account ?</H6>
                     <Touchables
+                        onPress={() => {
+                            navigation.navigate(ScreenNames.SignUpPersonalInfo)
+                        }}
                         titleStyle={styles.signupTouchableTitle}
                         {...styles.signupTouchable}
                         title='Signup'>

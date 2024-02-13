@@ -86,9 +86,6 @@ function ForgotPasswordStepOne({ route, navigation }: { route: any, navigation: 
                     {...styles.loginTouchable}
                     titleStyle={styles.loginTouchableTitle}
                     onPress={handleSave}
-                    // onPress={() => {
-
-                    // }}
                     title='Verify'></Touchables>
             </View>
             <Toast config={toastConfig} />

@@ -8,6 +8,7 @@ import InitiateForgotPassword from "../screens/ForgotPasswordFlow/ForgotPassword
 import ForgotPasswordStepOne from "../screens/ForgotPasswordFlow/ForgotPassStepOne";
 import ResetPasswordOtpStep from "../screens/ForgotPasswordFlow/ConfirmOtp";
 import SetPasswordForgotFlow from "../screens/ForgotPasswordFlow/SetPassword";
+import SignUpPersonalInfo from "../screens/SignUpFlow";
 
 const Stack = createNativeStackNavigator();
 
@@ -41,6 +42,10 @@ function BaseNavigator() {
             <Stack.Screen
                 name={ScreenNames.SetPasswordForgotFlow}
                 component={SetPasswordForgotFlow}
+                options={{ headerShown: false }} />
+            <Stack.Screen
+                name={ScreenNames.SignUpPersonalInfo}
+                component={SignUpPersonalInfo}
                 options={{ headerShown: false }} />
         </Stack.Navigator>
     );

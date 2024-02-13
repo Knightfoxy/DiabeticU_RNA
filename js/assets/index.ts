@@ -18,6 +18,8 @@ const ImageName = {
     errorPopupImg: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/errorImg.png'),
     checkmarkGreen: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/greenCheckmark.png'),
     redCircle: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/redCircle.png'),
+    uncheckedCheckmark: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/unmarkedCheckmark.png'),
+    pinkCheckmark: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/checkmarkPink.png'),
 }
 
 export { ImageName };

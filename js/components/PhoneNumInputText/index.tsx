@@ -22,7 +22,7 @@ function PhoneNumTextField({ onChangeText }) {
             </TouchableOpacity>
             <BasicTextInput
                 {...styles.textInputStyle}
-                autoFocus={true}
+                autoFocus={false}
                 onChangeText={handleTextChange}
                 placeHolder='Phone Number'></BasicTextInput>
         </View>
