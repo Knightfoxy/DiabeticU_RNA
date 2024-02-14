@@ -1,11 +1,10 @@
 import { StyleSheet } from 'react-native';
-import metrics from '../../themes/metrics';
+import metrics from '../../../themes/metrics';
 
 export default StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        backgroundColor: 'white',
     },
     backTouchable: {
         backgroundColor: '#F6F6F6',
@@ -57,10 +56,27 @@ export default StyleSheet.create({
         backgroundColor: 'white',
         height: 60,
     },
+    tryInsteadStyle: {
+        marginTop: 15,
+        marginHorizontal: 30,
+        height: 30,
+        flexDirection: 'row'
+    },
     loginTouchableTitle: {
         color: 'white',
         fontSize: 16,
         fontWeight: '700',
+    },
+    tryInsteadTitle: {
+        marginLeft: 10,
+        color: '#7F879A',
+        fontSize: 16,
+        fontWeight: '400',
+    },
+    suggestedUsernameTitle: {
+        color: '#000080',
+        fontSize: 16,
+        fontWeight: '600',
     },
     loginTouchable: {
         color: 'white',
@@ -120,6 +136,13 @@ export default StyleSheet.create({
         borderColor: '#E7EBF3',
         marginHorizontal: 6,
         borderRadius: 4,
+    },
+    contactText: {
+        marginHorizontal: 30,
+        fontSize: 16,
+        fontWeight: '500',
+        color: '#7B8293',
+        marginBottom: 12,
     },
 
 });

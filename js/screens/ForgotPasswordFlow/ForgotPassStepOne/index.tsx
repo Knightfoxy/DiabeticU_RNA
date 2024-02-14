@@ -8,6 +8,7 @@ import BasicTextInput from "../../../primitives/InputText";
 import { ScreenNames } from "../../../navigators/screenNames";
 import Toast from "react-native-toast-message";
 import toastConfig from "../../../components/Toast";
+import NavigationToOtpScreen from "../ForgotPassword/navigationFrom";
 
 function ForgotPasswordStepOne({ route, navigation }: { route: any, navigation: any }) {
 
@@ -33,7 +34,8 @@ function ForgotPasswordStepOne({ route, navigation }: { route: any, navigation: 
         } else {
             navigation.navigate(ScreenNames.ResetPasswordOtpStep, {
                 contactDetails: contactDetail,
-                contactType: crdType
+                contactType: crdType,
+                navigationFrom: NavigationToOtpScreen.forgotPasswordFlow
             })
         }
     };
@@ -41,7 +43,6 @@ function ForgotPasswordStepOne({ route, navigation }: { route: any, navigation: 
     const validateContactDetail = (input: string) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const phoneRegex = /^(\+\d{1,2}\s?)?(\d{3,4}[\s.-]?)?\d{7,}$/;
-
         if (input.trim() === '') {
             return { valid: false, error: 'Contact Detail cannot be empty' };
         } else if ((crdType == 1) ? (!emailRegex.test(input)) : (!phoneRegex.test(input))) {

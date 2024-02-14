@@ -18,7 +18,7 @@ export default StyleSheet.create({
     },
     rowContainer: {
         height: 65,
-        marginTop: 30,
+        marginTop: 40,
         justifyContent: 'flex-end'
     },
 });

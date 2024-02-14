@@ -9,6 +9,7 @@ import ForgotPasswordStepOne from "../screens/ForgotPasswordFlow/ForgotPassStepO
 import ResetPasswordOtpStep from "../screens/ForgotPasswordFlow/ConfirmOtp";
 import SetPasswordForgotFlow from "../screens/ForgotPasswordFlow/SetPassword";
 import SignUpPersonalInfo from "../screens/SignUpFlow";
+import SetupProfileScreen from "../screens/SignUpFlow/SetupProfile";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,35 +19,39 @@ function BaseNavigator() {
             <Stack.Screen
                 name={ScreenNames.Splash}
                 component={SplashScreen}
-                options={{ headerShown: false }} />
+                options={{ headerShown: false, contentStyle: {backgroundColor: 'white'}}} />
             <Stack.Screen
                 name={ScreenNames.Landing}
                 component={LandingScreen}
-                options={{ headerShown: false }} />
+                options={{ headerShown: false, contentStyle: { backgroundColor: 'white' } }} />
             <Stack.Screen
                 name={ScreenNames.Login}
                 component={LoginScreen}
-                options={{ headerShown: false }} />
+                options={{ headerShown: false, contentStyle: { backgroundColor: 'white' } }} />
             <Stack.Screen
                 name={ScreenNames.InitiateForgotPassword}
                 component={InitiateForgotPassword}
-                options={{ headerShown: false }} />
+                options={{ headerShown: false, contentStyle: { backgroundColor: 'white' } }} />
             <Stack.Screen
                 name={ScreenNames.ForgotPasswordAddCredentials}
                 component={ForgotPasswordStepOne}
-                options={{ headerShown: false }} />
+                options={{ headerShown: false, contentStyle: { backgroundColor: 'white' } }} />
             <Stack.Screen
                 name={ScreenNames.ResetPasswordOtpStep}
                 component={ResetPasswordOtpStep}
-                options={{ headerShown: false }} />
+                options={{ headerShown: false, contentStyle: { backgroundColor: 'white' } }} />
             <Stack.Screen
                 name={ScreenNames.SetPasswordForgotFlow}
                 component={SetPasswordForgotFlow}
-                options={{ headerShown: false }} />
+                options={{ headerShown: false, contentStyle: { backgroundColor: 'white' } }} />
             <Stack.Screen
                 name={ScreenNames.SignUpPersonalInfo}
                 component={SignUpPersonalInfo}
-                options={{ headerShown: false }} />
+                options={{ headerShown: false, contentStyle: { backgroundColor: 'white' } }} />
+            <Stack.Screen
+                name={ScreenNames.SetupProfileScreen}
+                component={SetupProfileScreen}
+                options={{ headerShown: false, contentStyle: { backgroundColor: 'white' } }} />
         </Stack.Navigator>
     );
 }

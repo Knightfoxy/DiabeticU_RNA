@@ -7,6 +7,7 @@ const ScreenNames = {
     ResetPasswordOtpStep: 'ResetPasswordOtpStep',
     SetPasswordForgotFlow: 'SetPasswordForgotFlow',
     SignUpPersonalInfo: 'SignUpPersonalInfo',
+    SetupProfileScreen: 'SetupProfileScreen',
 }
 
 export { ScreenNames };

@@ -1,8 +1,9 @@
 import React from "react";
-import { InputTextProp } from "./@types";
+import { InputTextWithImageProp } from "./@types";
 import { TextInput } from "react-native-paper";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
-const BasicTextInput = (props: InputTextProp) => {
+const TextInputWithImage = (props: InputTextWithImageProp) => {
 
     const {
         placeHolder,
@@ -15,6 +16,10 @@ const BasicTextInput = (props: InputTextProp) => {
         onFocus,
         onPress,
         errorText = '',
+        rightimageColor,
+        rightimageSource,
+        rightonPressImage,
+        rightimageStyle,
         ...rest
     } = props;
 
@@ -32,14 +37,16 @@ const BasicTextInput = (props: InputTextProp) => {
             enterKeyHint='next'
             onFocus={onFocus}
             style={[props]}
+            textColor="black"
             outlineColor={borderColor} outlineStyle={{ borderWidth: 1 }}
             theme={{ roundness: 16, colors: { onSurfaceVariant: borderColor } }} activeOutlineColor={activeBorderColor} mode="outlined"
             label={placeHolder}
             value={children}
+            right={<TextInput.Icon color={rightimageColor} style={rightimageStyle} icon={rightimageSource} onPress={rightonPressImage} />}
             onChangeText={onChangeText}
         />
     );
 
 };
 
-export default BasicTextInput;
+export default TextInputWithImage;

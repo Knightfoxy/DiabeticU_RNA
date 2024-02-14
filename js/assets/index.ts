@@ -20,6 +20,10 @@ const ImageName = {
     redCircle: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/redCircle.png'),
     uncheckedCheckmark: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/unmarkedCheckmark.png'),
     pinkCheckmark: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/checkmarkPink.png'),
+    redCross: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/redCross.png'),
+    greenCheckmark: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/greenCheckmark.png'),
+    calenderIcon: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/calenderIcon.png'),
+    chevronDownBlue: require('/Users/ai/Desktop/ReactN_Projects/DiabeticU_Demo/js/assets/images/chevronBottom.png'),
 }
 
 export { ImageName };

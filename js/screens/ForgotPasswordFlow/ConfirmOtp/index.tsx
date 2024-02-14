@@ -11,6 +11,7 @@ import { ScreenNames } from "../../../navigators/screenNames";
 function ResetPasswordOtpStep({ route, navigation }) {
 
     const contactDetails = route.params.contactDetails
+    const navigatioNFrom = route.params.navigationFrom
     const contactType = route.params.contactType
     const [otp, setOtp] = useState(['', '', '', '']);
     const inputRefs = useRef([
@@ -93,7 +94,11 @@ function ResetPasswordOtpStep({ route, navigation }) {
                     {...styles.loginTouchable}
                     titleStyle={styles.loginTouchableTitle}
                     onPress={() => {
-                        navigation.navigate(ScreenNames.SetPasswordForgotFlow)
+                        if (navigatioNFrom == 1) {
+                            navigation.navigate(ScreenNames.SetPasswordForgotFlow)
+                        } else {
+                            navigation.navigate(ScreenNames.SetupProfileScreen)
+                        } 
                     }}
                     title='Verify'></Touchables>
                 <View style={{ flex: 4, flexDirection: 'column' }}></View>

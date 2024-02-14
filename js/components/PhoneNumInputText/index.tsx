@@ -7,7 +7,7 @@ import { H6 } from "../../primitives/Text";
 import { memo } from "react";
 
 
-function PhoneNumTextField({ onChangeText }) {
+function PhoneNumTextField({ onChangeText, errorText }) {
 
     const handleTextChange = (text: string) => {
         onChangeText(text);
@@ -22,6 +22,7 @@ function PhoneNumTextField({ onChangeText }) {
             </TouchableOpacity>
             <BasicTextInput
                 {...styles.textInputStyle}
+                errorText={errorText}
                 autoFocus={false}
                 onChangeText={handleTextChange}
                 placeHolder='Phone Number'></BasicTextInput>
